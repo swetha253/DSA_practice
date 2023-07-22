@@ -5,9 +5,9 @@ public class Solution {
 
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        Scanner sc = new Scanner(System.in);
-        int n = Integer.parseInt(sc.nextLine());
-        int [] numbers = Arrays.stream(sc.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        Scanner ip= new Scanner(System.in);
+        int n = Integer.parseInt(ip.nextLine());
+        int [] numbers = Arrays.stream(ip.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         int negCount = 0;
         for(int i = 0; i < n; i++){
             for(int j = i; j < n; j++){
