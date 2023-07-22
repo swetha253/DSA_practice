@@ -4,19 +4,19 @@ public class Solution {
 
     public static void main(String[] args) {
 	   
-        Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
-int[] a= new int[n];
+        Scanner ip = new Scanner(System.in);
+        int s = ip.nextInt();
+int[] arr= new int[s];
 
-        for(int i = 0 ; i < n; i++){
-            int value = scan.nextInt();
-            a[i] = value;
+        for(int i = 0 ; i < s; i++){
+            int value = ip.nextInt();
+            arr[i] = value;
         }
-        scan.close();
+        ip.close();
 
         // Prints each sequential element in array a
-        for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
         }
     }
 }
