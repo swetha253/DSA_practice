@@ -9,14 +9,14 @@ import java.util.regex.*;
 public class Solution {
 
     
-    private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner ip = new Scanner(System.in);
 
     public static void main(String[] args) {
         int[][] arr = new int[6][6];
 
         for (int i = 0; i < 6; i++) {
-            String[] arrRowItems = scanner.nextLine().split(" ");
-            scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+            String[] arrRowItems = ip.nextLine().split(" ");
+            ip.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
             for (int j = 0; j < 6; j++) {
                 int arrItem = Integer.parseInt(arrRowItems[j]);
@@ -24,14 +24,14 @@ public class Solution {
             }
         }
     int csum =Integer.MIN_VALUE;
-        for(int i=0;i<6;i++)
+        for(int x=0;x<6;x++)
         {
-            for(int j=0;j<6;j++)
+            for(int y=0;y<6;y++)
             { 
-                if(i>1 && j>1)
+                if(x>1 && y>1)
                 {
-                    int sum=arr[i][j]+arr[i-1][j-1]+arr[i-2][j]+arr[i-2][j-1]
-                    +arr[i-2][j-2]+arr[i][j-1]+arr[i][j-2];
+                    int sum=arr[x][y]+arr[x-1][y-1]+arr[x-2][y]+arr[x-2][y-1]
+                    +arr[x-2][y-2]+arr[x][y-1]+arr[x][y-2];
                     
                     if(sum>csum)
                     {
@@ -41,6 +41,6 @@ public class Solution {
             }
         }
         System.out.print(csum);
-        scanner.close();
+        ip.close();
     }
 }
